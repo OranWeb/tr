@@ -1,458 +1,1935 @@
 
 <!DOCTYPE html><html lang='en' class=''>
-<head><script src='//static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js'></script><script src='//static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/nilbog/pen/emoJGR" />
+<head><script src='//static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js'></script><script src='//static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/anon/pen/KbxeaP" />
+<script src="https://use.fontawesome.com/092c94a1fb.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700|PT+Serif:400,700" rel="stylesheet">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+<style class="cp-pen-styles">* {
+  box-sizing: border-box;
+}
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
-<style class="cp-pen-styles">@import url(https://fonts.googleapis.com/css?family=Lato:300,400,900);
 html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: "Lato";
-  background: #222;
+  min-width: 320px;
+}
+@media only screen and (min-width: 412px) {
+  html, body {
+    min-width: 412px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  html, body {
+    min-width: 620px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  html, body {
+    min-width: 768px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html, body {
+    min-width: 1024px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html, body {
+    min-width: 1200px;
+  }
 }
 
-.menu {
-  width: 100%;
-  height: 50px;
-  position: fixed;
-  background: #222;
-  top: 0;
-  z-index: 111;
-  line-height: 50px;
-  padding: 5px;
-  border-bottom: 1px solid rgba(207, 59, 40, 0.3);
+body {
+  font-family: "Droid Sans", sans-serif;
+  color: #282828;
 }
 
-.menu a {
-  text-decoration: none;
-  color: inherit;
+@media only screen and (min-width: 320px) {
+  section {
+    margin: 30px 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section {
+    margin: 50px 0;
+  }
 }
 
-.menu h1 {
-  margin: 0 0 0 10px;
-  font-weight: 400;
-  color: #eaeaea;
-  width: 55px;
-  cursor: pointer;
-  display: inline-block;
-  border-right: 1px solid #444;
-  line-height: 50px;
-  font-size: 25px;
-  transition: all 0.3s;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-}
-
-.menu h1 span {
-  color: #cf3b28;
-  transition: all 0.2s;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-}
-
-.menu h1:hover {
-  color: #666;
-}
-
-.menu h1:hover span {
-  color: #666;
-}
-
-.topnav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  height: 50px;
-  display: inline-block;
-  font-weight: 300;
-  color: #eaeaea;
-  font-size: 15px;
-  letter-spacing: 1px;
-}
-
-.topnav li {
-  text-align: center;
-  color: #eaeaea;
-  margin: 0px 7px;
-  display: inline-block;
-  font-size: 30px;
-  line-height: 50px;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-}
-
-.topnav li:first-child {
-  margin-left: 10px;
-}
-
-.topnav li:hover {
-  color: #cf3b28;
-  transform: rotate(10deg);
-  -webkit-transform: rotate(10deg);
-}
-
-.topnav a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.head {
-  color: #eaeaea;
-  background: #222;
+h1 {
+  display: block;
   text-transform: uppercase;
-  font-weight: 300;
-  font-size: 60px;
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  z-index: 1111;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  letter-spacing: 0.26em;
+  font-size: 1.125rem;
+}
+@media only screen and (min-width: 620px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+
+h2 {
+  display: block;
+  font-size: 0.8rem;
+}
+@media only screen and (min-width: 620px) {
+  h2 {
+    font-size: 1.3125rem;
+  }
+}
+
+.active {
+  color: #94b8d6 !important;
+}
+
+.blue {
+  color: #6f91ab;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.arrow-btn {
+  background: #1b2d5f;
+  width: 45px;
+  height: 45px;
+  color: #FFF;
+  border-radius: 50%;
+  line-height: 45px;
   text-align: center;
-  line-height: 25px;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-}
-
-.head-hide {
-  height: 0vh;
-  opacity: 0;
-}
-
-.down {
-  width: 20px;
-  height: 20px;
-  opacity: 0.2;
-  border-bottom: 5px solid #cf3b28;
-  border-right: 5px solid #cf3b28;
-  position: absolute;
-  bottom: 13px;
-  left: 50%;
-  cursor: pointer;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-}
-
-.down:before {
-  content: "scroll";
-  opacity: 0;
-  position: absolute;
-  right: -10px;
-  top: -10px;
-  font-size: 15px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-}
-
-.down:hover:before {
-  opacity: 1;
-}
-
-.head span {
-  font-weight: 900;
-}
-
-.name {
-  width: 500px;
-  top: 50%;
-  position: absolute;
-  left: 50%;
-  margin-left: -250px;
-  margin-top: -30px;
-}
-
-.bye {
+  display: none;
   position: relative;
+  z-index: -99999;
+  cursor: pointer;
+  transition: 0.2s linear all;
+}
+.arrow-btn:hover {
+  background: #6f91ab;
+  transition: 0.2s all linear;
+}
+@media only screen and (min-width: 1024px) {
+  .arrow-btn {
+    display: inline-block;
+    z-index: 1;
+    top: 220px;
+  }
 }
 
-.sub-name {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: 7px;
-  font-weight: 300;
-  margin-left: 23px;
-  color: #cf3b28;
-  font-size: 35px;
+.left-arrow {
+  float: left;
+}
+@media only screen and (min-width: 1024px) {
+  .left-arrow {
+    margin-left: 15px;
+  }
 }
 
-.content-wrap {
-  position: absolute;
+.right-arrow {
+  float: right;
+}
+@media only screen and (min-width: 1024px) {
+  .right-arrow {
+    margin-right: 15px;
+  }
+}
+
+.container {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 412px) {
+  .container {
+    min-width: 412px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  .container {
+    min-width: 620px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    min-width: 768px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    min-width: 1024px;
+  }
+}
+
+.gutter {
+  padding: 0 30px;
+}
+
+a.see-more {
+  text-decoration: none;
+  color: #282828;
+  font-family: "PT Serif", serif;
+  float: right;
+  text-transform: uppercase;
+  padding: 10px 0;
+  position: relative;
   z-index: 1;
 }
-
-.sec {
-  height: 100vh;
-  width: 100vw;
+@media only screen and (min-width: 768px) {
+  a.see-more {
+    font-size: 2rem;
+  }
+}
+a.see-more:visited {
+  color: #282828;
+}
+@media only screen and (min-width: 1024px) {
+  a.see-more {
+    display: none;
+    z-index: -999999;
+  }
 }
 
-.intro {
-  background: #333;
-  color: #eaeaea;
-  text-align: center;
-  display: table;
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+nav#main-nav {
+  font-family: "PT Serif", serif;
   text-transform: uppercase;
+  display: block;
+  margin: 0;
+  min-width: 320px;
+}
+@media only screen and (min-width: 450px) {
+  nav#main-nav {
+    width: 450px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  nav#main-nav {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  nav#main-nav ul {
+    min-width: 600px !important;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 450px) {
+  nav#main-nav.main-nav-gutter {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  nav#main-nav.main-nav-gutter {
+    padding: 0 100px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  nav#main-nav.main-nav-gutter {
+    padding: 0 200px 0 100px;
+  }
+}
+nav#main-nav #logo {
+  margin-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 1200px) {
+  nav#main-nav #logo {
+    display: inline-block;
+    float: left;
+    margin: 50px 0 0;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  nav#main-nav #logo {
+    margin-left: 200px;
+  }
+}
+nav#main-nav ul {
+  margin: 30px auto;
+  padding: 0 auto;
+  min-width: 320px;
+}
+@media only screen and (min-width: 1024px) {
+  nav#main-nav ul {
+    margin: 70px auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  nav#main-nav ul {
+    float: right;
+    display: inline-block;
+  }
+}
+nav#main-nav ul li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+  padding: 0 6px;
+  font-size: 0.7rem;
+}
+nav#main-nav ul li a {
+  text-decoration: none;
+  color: #282828;
+}
+nav#main-nav ul li a:hover {
+  color: #6f91ab;
 }
 
-.intro .text-contain {
-  display: table-cell;
-  vertical-align: middle;
+nav#footer-nav {
+  display: block;
+  height: 20px;
+}
+@media only screen and (min-width: 1200px) {
+  nav#footer-nav {
+    width: 1200px;
+  }
+}
+nav#footer-nav ul {
+  display: inline-block;
+  padding: 0 30px;
+  margin: 0 auto;
   text-align: center;
-  padding-left: 10px;
+  font-size: 0.6rem;
+  position: relative;
+  top: -25px;
+  min-width: 320px;
+}
+@media only screen and (min-width: 620px) {
+  nav#footer-nav ul {
+    top: 12px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  nav#footer-nav ul {
+    top: 20px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  nav#footer-nav ul {
+    top: 40px !important;
+  }
+}
+nav#footer-nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 auto;
+  float: left;
+  padding: 0 10px !important;
+  width: 50px !important;
+}
+@media only screen and (min-width: 412px) {
+  nav#footer-nav ul li {
+    width: 70px !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  nav#footer-nav ul li {
+    width: 150px !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  nav#footer-nav ul li {
+    width: 100px !important;
+  }
+}
+nav#footer-nav ul li a {
+  text-decoration: none;
+  color: #FFF;
+  margin: 0;
 }
 
-.intro .text {
-  padding-top: 30px;
-  text-align: center;
-  width: 470px;
+nav#footer-nav ul {
+  position: relative;
+  top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav#footer-nav ul li {
+  padding: 0 50px;
+}
+
+nav#main-nav ul li, nav#footer-nav ul li {
   margin: 0 auto;
 }
-
-.intro h2 {
-  vertical-align: middle;
-  font-size: 40px;
-  margin: -5px 0;
+@media only screen and (min-width: 412px) {
+  nav#main-nav ul li, nav#footer-nav ul li {
+    padding: 0 12px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  nav#main-nav ul li, nav#footer-nav ul li {
+    font-size: 1rem;
+    padding: 0 25px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  nav#main-nav ul li, nav#footer-nav ul li {
+    font-size: 1.2rem;
+    padding: 0 35px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  nav#main-nav ul li, nav#footer-nav ul li {
+    padding: 0 50px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  nav#main-nav ul li, nav#footer-nav ul li {
+    padding: 0 30px;
+    font-size: 1rem;
+  }
 }
 
-.intro h3 {
-  font-weight: 300;
-  color: #cf3b28;
-  font-size: 19px;
-  letter-spacing: 0.5px;
-  margin: 0 0 0px 0;
+@media only screen and (min-width: 412px) {
+  nav#main-nav, nav#main-nav ul, nav#footer-nav ul {
+    min-width: 412px;
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 620px) {
+  nav#main-nav, nav#main-nav ul, nav#footer-nav ul {
+    min-width: 620px;
+    padding: 0 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  nav#main-nav, nav#main-nav ul, nav#footer-nav ul {
+    min-width: 768px;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  nav#main-nav, nav#main-nav ul, nav#footer-nav ul {
+    min-width: 1024px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  nav#main-nav, nav#main-nav ul, nav#footer-nav ul {
+    min-width: 600px;
+  }
 }
 
-.intro h5 {
-  font-weight: 900;
-  color: #1e1e1e;
-  margin: 0;
-  font-size: 15px;
-  letter-spacing: 3.9px;
+@media only screen and (min-width: 450px) {
+  nav#footer-nav {
+    width: 450px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  nav#footer-nav {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  nav#footer-nav.container {
+    min-width: 1200px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  nav#footer-nav ul {
+    padding: 0 25%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  nav#footer-nav ul {
+    min-width: 1100px;
+  }
 }
 
-#bot-h5 {
-  color: #eaeaea;
-  font-weight: 300;
-  letter-spacing: 10px;
-  margin-top: 30px;
-}
-
-.pg-btn {
-  width: 150px;
-  height: 15px;
-  line-height: 15px;
-  border-bottom: 1px solid #eaeaea;
-  padding: 10px 0;
-  cursor: pointer;
-  font-weight: 300;
-  font-size: 15px;
-}
-
-.begin {
-  margin: 30px auto;
-  letter-spacing: 5px;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-}
-
-.begin:hover {
-  background: #222;
-  border-bottom: 1px solid #cf3b28;
-  letter-spacing: 6px;
-}
-
-.side {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 100%;
+header {
   width: 100%;
-  z-index: 11;
-  height: auto;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background: #eaeaea;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
+  display: block;
+  text-align: center;
+}
+header::after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+header img {
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+@media only screen and (min-width: 412px) {
+  header img {
+    width: 250px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  header img {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header img {
+    float: right;
+    width: 452px;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1396px) {
+  header img {
+    width: 500px;
+    position: relative;
+    left: 80px;
+    top: 205px;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1492px) {
+  header img {
+    left: 100px;
+  }
+}
+@media only screen and (min-width: 1509px) {
+  header img {
+    left: 500px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  header img {
+    width: 600px;
+    margin: 0;
+    left: 230px;
+    top: 210px;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  header img {
+    left: 250px;
+  }
+}
+@media only screen and (min-width: 1908px) {
+  header img {
+    left: 550px;
+  }
+}
+header div.main-text {
+  display: block;
+  margin-top: 0px;
+  line-height: 20px;
+  font-size: 0.7rem;
+}
+@media only screen and (min-width: 620px) {
+  header div.main-text {
+    font-size: 1rem;
+    line-height: 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header div.main-text {
+    width: 550px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header div.main-text {
+    float: left;
+    width: 452px;
+    position: relative;
+    top: 200px;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1396px) {
+  header div.main-text {
+    top: -200px;
+    left: -60px;
+  }
+}
+@media only screen and (min-width: 1492px) {
+  header div.main-text {
+    left: -10px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  header div.main-text {
+    width: 600px;
+    top: -300px;
+    left: -120px;
+  }
+}
+header hr {
+  border: 0.5px solid #6f91ab;
+  width: 15%;
+}
+@media only screen and (min-width: 1024px) {
+  header div.container.gutter {
+    padding: 0 50px;
+  }
 }
 
-.unseen {
-  display: none;
+section#company-perks {
+  width: 100%;
+  background: #6f91ab;
+  background: -moz-linear-gradient(45deg, #6f91ab 0%, #5a83a3 100%);
+  background: -webkit-linear-gradient(45deg, #6f91ab 0%, #5a83a3 100%);
+  background: linear-gradient(45deg, #6f91ab 0%, #5a83a3 100%);
+  height: 130px;
+  color: #FFF;
+  position: relative;
+  z-index: 2;
 }
-
-.showing {
-  left: 0;
+@media only screen and (min-width: 412px) {
+  section#company-perks {
+    height: 110px;
+  }
 }
-
-.desc {
-  margin-top: 60px;
+@media only screen and (min-width: 620px) {
+  section#company-perks {
+    height: 200px;
+  }
 }
-
-.desc h1 {
-  text-align: right;
-  font-size: 30px;
-  padding-right: 10px;
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 5px;
-  line-height: 45px;
+@media only screen and (min-width: 1024px) {
+  section#company-perks {
+    height: 250px;
+    margin-top: 0px;
+  }
 }
-
-.sec-A h1 {
-  color: #cf3b28;
-  border-bottom: 1px solid #cf3b28;
+@media only screen and (min-width: 1600px) {
+  section#company-perks {
+    height: 230px;
+  }
 }
-
-.sec-A h1 span {
-  font-weight: 300;
-  font-size: 25px;
-  color: #aaa;
-  line-height: 0;
+@media only screen and (min-width: 1600px) {
+  section#company-perks .container {
+    width: 1600px;
+  }
 }
-
-.photos ul {
-  list-style: none;
+section#company-perks .column-left {
+  margin-left: 17.5px;
+}
+@media only screen and (min-width: 412px) {
+  section#company-perks .column-left {
+    margin-left: 30px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  section#company-perks .column-left {
+    margin-left: 35px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#company-perks .column-left {
+    margin-left: 40px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#company-perks .column-left {
+    margin-left: 120px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#company-perks .column-left {
+    margin-left: 200px;
+  }
+}
+section#company-perks .column-right {
+  margin-right: 17.5px;
+}
+@media only screen and (min-width: 412px) {
+  section#company-perks .column-right {
+    margin-right: 30px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  section#company-perks .column-right {
+    margin-right: 35px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#company-perks .column-right {
+    margin-right: 40px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#company-perks .column-right {
+    margin-right: 120px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#company-perks .column-right {
+    margin-right: 200px;
+  }
+}
+section#company-perks .perk-column {
+  width: 80px;
+  float: left;
+  padding: 15px 0;
+  text-align: center;
+}
+@media only screen and (min-width: 412px) {
+  section#company-perks .perk-column {
+    width: 100px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  section#company-perks .perk-column {
+    padding: 30px 0;
+    width: 160px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#company-perks .perk-column {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#company-perks .perk-column {
+    padding: 50px 0;
+  }
+}
+section#company-perks .perk-column-mid {
+  margin: 0 17.5px;
+}
+@media only screen and (min-width: 620px) {
+  section#company-perks .perk-column-mid {
+    margin: 0 35px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#company-perks .perk-column-mid {
+    margin: 0 40px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#company-perks .perk-column-mid {
+    margin: 0 80px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#company-perks .perk-column-mid {
+    margin: 0 300px;
+  }
+}
+section#company-perks img {
+  margin-bottom: 10px;
+  width: 35px;
+}
+@media only screen and (min-width: 620px) {
+  section#company-perks img {
+    width: 70px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#company-perks img {
+    width: 80px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#company-perks img {
+    width: 100px;
+  }
+}
+section#company-perks img.padlock-img {
+  width: 25px;
+}
+@media only screen and (min-width: 620px) {
+  section#company-perks img.padlock-img {
+    width: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#company-perks img.padlock-img {
+    width: 60px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#company-perks img.padlock-img {
+    width: 65px;
+  }
+}
+section#company-perks strong {
+  font-weight: 700;
+  font-size: 0.5rem;
   margin: 0;
   padding: 0;
+}
+@media only screen and (min-width: 620px) {
+  section#company-perks strong {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#company-perks strong {
+    font-size: 1rem;
+  }
+}
+section#company-perks p {
+  margin-top: 5px;
+  font-size: 0.5rem;
+}
+@media only screen and (min-width: 620px) {
+  section#company-perks p {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#company-perks p {
+    font-size: 1rem;
+  }
+}
+
+section#who-we-are {
   width: 100%;
-  text-align: center;
+}
+@media only screen and (min-width: 1600px) {
+  section#who-we-are div.container {
+    width: 1600px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#who-we-are div.container.gutter {
+    padding: 0 50px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#who-we-are div.container.gutter {
+    padding: 0 80px;
+    line-height: 23px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#who-we-are div.container.gutter {
+    padding: 0 80px;
+  }
+  section#who-we-are div.container.gutter .left-section {
+    float: left;
+    width: 260px;
+  }
+}
+@media only screen and (min-width: 1600px) and (min-width: 1600px) {
+  section#who-we-are div.container.gutter .left-section {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#who-we-are div.container.gutter .right-section {
+    float: right;
+    width: 260px;
+  }
+}
+@media only screen and (min-width: 1600px) and (min-width: 1600px) {
+  section#who-we-are div.container.gutter .right-section {
+    width: 400px;
+  }
 }
 
-.photos li {
+section#who-we-are h2 {
+  font-weight: 400;
   text-align: center;
-  display: inline-block;
-  min-width: 350px;
-  margin: 10px;
+}
+@media only screen and (min-width: 620px) {
+  section#who-we-are h2 {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#who-we-are h2 {
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#who-we-are h2 {
+    margin: 100px 0 50px;
+    line-height: 36px;
+  }
+}
+section#who-we-are h3 {
+  margin-bottom: 5px;
+  font-size: 0.7rem;
+}
+@media only screen and (min-width: 768px) {
+  section#who-we-are h3 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#who-we-are h3 {
+    font-size: 1.1rem;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#who-we-are h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+}
+section#who-we-are p {
+  margin-top: 0px;
+  font-size: 0.7rem;
+}
+@media only screen and (min-width: 620px) {
+  section#who-we-are p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#who-we-are p {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#who-we-are p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#who-we-are p {
+    line-height: 32px;
+    font-size: 1.1rem;
+  }
+}
+section#who-we-are img {
+  margin: 30px auto;
+  display: block;
+  width: 200px;
+}
+@media only screen and (min-width: 620px) {
+  section#who-we-are img {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#who-we-are img {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#who-we-are img {
+    display: inline-block;
+    margin: 20px 300px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#who-we-are img {
+    margin: 0 150px;
+  }
 }
 
-.photos img {
-  max-width: 100%;
-  height: 600px;
+section#clinical-cases {
+  width: 100%;
 }
-
-.sub-btn {
-  margin: 0 auto;
-  width: 120px;
+@media only screen and (min-width: 1600px) {
+  section#clinical-cases .container {
+    width: 1600px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#clinical-cases::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#clinical-cases .gutter {
+    padding: 0;
+  }
+}
+section#clinical-cases h2 {
+  font-weight: 400;
   text-align: center;
-  text-transform: uppercase;
-  height: 15px;
-  padding: 10px 0;
-  font-weight: 300;
-  line-height: 15px;
-  font-size: 15px;
-  letter-spacing: 3px;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 768px) {
+  section#clinical-cases h2 {
+    font-size: 1.5rem;
+    padding: 60px 0 0px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#clinical-cases h2 {
+    line-height: 30px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#clinical-cases h2 {
+    width: 1000px;
+    margin: 70px auto;
+  }
+}
+section#clinical-cases .common-case {
+  max-width: 320px;
+  height: 150px;
+  background: #1b2d5f;
+  margin: 20px auto;
+  color: #FFF;
+  border-radius: 3px;
   cursor: pointer;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
+  transition: all 0.2s linear;
+}
+@media only screen and (min-width: 620px) {
+  section#clinical-cases .common-case {
+    max-width: 620px;
+    height: 270px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#clinical-cases .common-case {
+    max-width: 708px;
+    margin: 50px auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#clinical-cases .common-case {
+    width: 200px;
+    float: left;
+    margin: 5px;
+    height: 460px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#clinical-cases .common-case {
+    width: 330px;
+    height: 500px;
+    margin: 20px;
+    padding: 5px;
+  }
+}
+section#clinical-cases .common-case:hover {
+  background: #6f91ab;
+  transition: all 0.2s linear;
+}
+section#clinical-cases .common-case:hover img {
+  opacity: 0.7;
+  transition: all 0.2s linear;
+}
+section#clinical-cases .common-case-text {
+  float: right;
+  width: 110px;
+  padding: 5px;
+}
+@media only screen and (min-width: 412px) {
+  section#clinical-cases .common-case-text {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  section#clinical-cases .common-case-text {
+    width: 270px;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#clinical-cases .common-case-text {
+    width: 340px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#clinical-cases .common-case-text {
+    width: 180px;
+    float: none;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#clinical-cases .common-case-text {
+    width: 300px;
+  }
+}
+section#clinical-cases .common-case img {
+  margin: 5px;
+  float: left;
+  width: 130px;
+  height: 140px;
+}
+@media only screen and (min-width: 412px) {
+  section#clinical-cases .common-case img {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  section#clinical-cases .common-case img {
+    width: 270px;
+    margin: 55px 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#clinical-cases .common-case img {
+    width: 340px;
+    height: 250px;
+    margin: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#clinical-cases .common-case img {
+    width: 180px;
+    height: 100px;
+    float: none;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#clinical-cases .common-case img {
+    width: 300px;
+    height: auto;
+  }
+}
+section#clinical-cases .common-case h4 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 5px 0 0px;
+  margin-bottom: 0;
+  font-size: 0.7rem;
+}
+@media only screen and (min-width: 620px) {
+  section#clinical-cases .common-case h4 {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#clinical-cases .common-case h4 {
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#clinical-cases .common-case h4 {
+    font-size: 1.2rem;
+  }
+}
+section#clinical-cases .common-case p {
+  font-size: 0.5rem;
+  margin-top: 3px;
+}
+@media only screen and (min-width: 620px) {
+  section#clinical-cases .common-case p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#clinical-cases .common-case p {
+    font-size: 1.1rem;
+  }
+}
+section#clinical-cases .common-case ul {
+  padding: 0;
+  margin-top: 0;
+}
+section#clinical-cases .common-case li {
+  font-size: 0.5rem;
+  padding: 0;
+}
+@media only screen and (min-width: 620px) {
+  section#clinical-cases .common-case li {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#clinical-cases .common-case li {
+    margin-left: 15px;
+    font-size: 1.1rem;
+  }
+}
+section#clinical-cases .common-case a {
+  color: #FFF;
+  text-decoration: none;
+  float: right;
+  margin-right: 10px;
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+  bottom: 15px;
+  font-size: 0.5rem;
+}
+@media only screen and (min-width: 412px) {
+  section#clinical-cases .common-case a {
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  section#clinical-cases .common-case a {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#clinical-cases .common-case a {
+    font-size: 1.1rem;
+  }
+}
+section#clinical-cases .common-case a:hover {
+  color: #31568d;
 }
 
-.code-btn {
-  border-bottom: 1px solid #222;
-  background: #eaeaea;
-  color: #cf3b28;
+section#partners {
+  background: #1b2d5f;
+  width: 100%;
+  height: 550px;
+  margin-top: 80px;
+}
+@media only screen and (min-width: 620px) {
+  section#partners {
+    height: 200px;
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#partners {
+    height: 400px;
+    margin-top: 130px;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#partners {
+    height: 500px;
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#partners {
+    height: 355px;
+    margin: 100px 0;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#partners .container {
+    width: 1600px;
+  }
+}
+section#partners h5 {
+  text-align: center;
+  color: #FFF;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  padding-top: 30px;
+  font-size: 1.2rem;
+}
+@media only screen and (min-width: 768px) {
+  section#partners h5 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#partners h5 {
+    padding-top: 50px;
+  }
+}
+section#partners img {
+  width: 150px;
+  display: block;
+  margin: 30px auto;
+}
+@media only screen and (min-width: 620px) {
+  section#partners img {
+    width: 85px;
+    margin: 10px;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#partners img {
+    width: 150px;
+    margin: 20px 30px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#partners img {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#partners img {
+    width: auto;
+    margin: 0 50px;
+  }
 }
 
-.code-btn:hover {
-  background: #222;
-  letter-spacing: 4px;
-  border-bottom: 1px solid #cf3b28;
-  color: #eaeaea;
+@media only screen and (min-width: 1024px) {
+  section#testimonials {
+    margin: 70px 0;
+  }
+}
+section#testimonials div.arrow-btn {
+  position: relative;
+  top: 100px;
+}
+section#testimonials::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media only screen and (min-width: 1600px) {
+  section#testimonials {
+    margin: 120px 0;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#testimonials .container {
+    width: 1600px;
+  }
+  section#testimonials .container .gutter {
+    padding: 0;
+  }
+}
+section#testimonials .testimonial {
+  width: 260px;
+  background: #6f91ab;
+  margin: 70px 0;
+  color: #FFF;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+}
+@media only screen and (min-width: 412px) {
+  section#testimonials .testimonial {
+    min-width: 360px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#testimonials .testimonial {
+    min-width: 708px;
+    padding: 20px;
+    margin: 130px 0;
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#testimonials .testimonial {
+    min-width: 260px;
+    height: 550px;
+    float: left;
+    margin: 0 10px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#testimonials .testimonial {
+    width: 400px;
+    height: 250px;
+    z-index: -2;
+    padding: 10px;
+    margin: 0 30px;
+  }
+}
+section#testimonials .testimonial-img1 {
+  position: relative;
+  top: -640px;
+}
+@media only screen and (min-width: 412px) {
+  section#testimonials .testimonial-img1 {
+    top: -560px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#testimonials .testimonial-img1 {
+    top: -1100px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#testimonials .testimonial-img1 {
+    top: -110px;
+    left: 210px !important;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#testimonials .testimonial-img1 {
+    left: 355px !important;
+    top: -80px;
+  }
+}
+section#testimonials .testimonial-img2 {
+  position: relative;
+  top: -475px;
+}
+@media only screen and (min-width: 412px) {
+  section#testimonials .testimonial-img2 {
+    top: -450px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#testimonials .testimonial-img2 {
+    top: -880px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#testimonials .testimonial-img2 {
+    top: -220px;
+    left: 495px !important;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#testimonials .testimonial-img2 {
+    top: -200px;
+    left: 815px !important;
+  }
+}
+section#testimonials .testimonial-img3 {
+  position: relative;
+  top: -330px;
+}
+@media only screen and (min-width: 768px) {
+  section#testimonials .testimonial-img3 {
+    top: -650px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#testimonials .testimonial-img3 {
+    top: -330px;
+    left: 775px !important;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#testimonials .testimonial-img3 {
+    top: -320px;
+    left: 1275px !important;
+  }
+}
+section#testimonials .testimonial-mid, section#testimonials .testimonial-right {
+  position: relative;
+  top: -10px;
+}
+@media only screen and (min-width: 1024px) {
+  section#testimonials .testimonial-mid, section#testimonials .testimonial-right {
+    top: 0;
+  }
+}
+section#testimonials .testimonial p {
+  font-size: 0.7rem;
+  line-height: 15px;
+  font-size: 0.7rem;
+}
+@media only screen and (min-width: 768px) {
+  section#testimonials .testimonial p {
+    font-size: 1.2rem;
+    line-height: 30px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#testimonials .testimonial p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#testimonials .testimonial p {
+    font-size: 1rem;
+    line-height: 22px;
+  }
+}
+section#testimonials .testimonial span.testimonial-name {
+  font-size: 0.7rem;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+  section#testimonials .testimonial span.testimonial-name {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#testimonials .testimonial span.testimonial-name {
+    font-size: 1.1rem;
+  }
+}
+section#testimonials .img-container {
+  height: 20px;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 768px) {
+  section#testimonials .img-container {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#testimonials .img-container {
+    z-index: -1;
+  }
+}
+section#testimonials .img-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #6f91ab;
+  display: block;
+  position: relative;
+  left: 150px;
+}
+@media only screen and (min-width: 412px) {
+  section#testimonials .img-container img {
+    left: 250px;
+  }
+}
+@media only screen and (min-width: 620px) {
+  section#testimonials .img-container img {
+    left: 350px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  section#testimonials .img-container img {
+    width: 200px;
+    height: 200px;
+    left: 470px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section#testimonials .img-container img {
+    width: 110px;
+    height: 110px;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section#testimonials .img-container img {
+    left: 0px;
+    width: 120px;
+    height: 120px;
+  }
+}
+section#testimonials a.see-more {
+  position: relative;
+  top: -45px;
+}
+@media only screen and (min-width: 768px) {
+  section#testimonials a.see-more {
+    top: -85px;
+  }
 }
 
-.back-btn {
-  background: #cf3b28;
-  color: #eaeaea;
-  border-bottom: 1px solid #222;
+footer {
+  height: 80px;
+  color: #FFF;
+  background: #1b2d5f;
 }
-
-.back-btn:hover {
-  background: #eaeaea;
-  color: #222;
-  letter-spacing: 5px;
+@media only screen and (min-width: 412px) {
+  footer {
+    height: 100px;
+  }
 }
-
-.sec-B {
-  background: #cf3b28;
+@media only screen and (min-width: 768px) {
+  footer {
+    height: 150px;
+  }
 }
-
-.sec-B h1 {
-  color: #eaeaea;
-  border-bottom: 1px solid #eaeaea;
+footer .container {
+  height: 80px;
+}
+footer span.attribution, footer span.copyright {
+  font-size: 0.5rem;
+  display: block;
+  text-align: center;
+  margin: 5px;
+}
+@media only screen and (min-width: 620px) {
+  footer span.attribution, footer span.copyright {
+    font-size: 0.6rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  footer span.attribution, footer span.copyright {
+    font-size: 0.9rem;
+  }
+}
+footer span.attribution a, footer span.copyright a {
+  color: #FFF;
+}
+@media only screen and (min-width: 412px) {
+  footer span {
+    position: relative;
+    top: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  footer span {
+    top: 30px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  footer span {
+    top: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  footer span.copyright {
+    margin: 5px 180px;
+  }
+}
+footer span.copyright a {
+  text-decoration: none;
+}
+footer span.copyright a:hover {
+  color: #6f91ab;
 }
 </style></head><body>
-<div class="menu">
-            <h1 class="home">J<span>W</span></h1>
-            <ul class="topnav">
-                <li><a href="https://codepen.io/spookyscary/" target="_blank"><i class="fa fa-codepen"></i></a></li>
-                <li><a href="https://twitter.com/FriedCaligari" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.facebook.com/justin.walker.16144" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                <li><a href="https://www.linkedin.com/pub/justin-walker/69/990/861" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+<body>
+
+  <nav id="main-nav" class="main-nav-gutter">
+    <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077560/company-site/LOGO.png" id="logo" alt="Company logo" style="height: 40px">
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="container gutter">
+      <div class="phone-image-container">
+        <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509393641/company-site/hand-phone3.png" alt="">
+      </div>
+
+      <div class="main-text">
+        <h1>We are Comp<span class="blue">any</span></h1>
+        <hr>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vulputate, turpis ut aliquet mattis, nisl quam hendrerit dolor, et cursus mauris libero a diam. Cras a aliquam velit.</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="company-perks">
+    <div class="container">
+      <div class="perk-column column-left">
+        <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077560/company-site/padlock.png" alt="" class="padlock-img">
+        <br>
+        <strong>Secure Communication</strong>
+        <p>Lorem ipsum dolor.</p>
+      </div>
+
+      <div class="perk-column perk-column-mid">
+        <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077560/company-site/exchange.png" alt="">
+        <br>
+        <strong>EMR Integration</strong>
+        <p>Vivamus gravida urna.</p>
+      </div>
+
+      <div class="perk-column column-right">
+        <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077561/company-site/video-call.png" alt="">
+        <br>
+        <strong>Provider &amp; Patient Portal</strong>
+        <p>Donec feugiat rutrum.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="who-we-are">
+    <div class="container gutter">
+      <h2>Nulla viverra quam sed dui sollicitudin vulputate. Praesent dignissim diam
+                    leo, a vulputate lorem gravida sit amet. Cras iaculis gravida orci, ac dictum nunc.
+                    Nullam urna metus, malesuada ut enim sed, accumsan mattis mi. </h2>
+
+      <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077559/company-site/black-ipad.png" alt="">
+
+      <div class="left-section">
+        <h3>Provider Flexibility</h3>
+        <p>Phasellus tempor, leo eu ultrices mattis, magna ligula rhoncus orci, ut sollicitudin turpis quam non augue.</p>
+        <p>Vestibulum dignissim ligula at lectus ultrices, eu tincidunt velit fermentum. Nulla ac ante turpis.</p>
+      </div>
+
+      <div class="right-section">
+        <h3>Patient Satisfaction</h3>
+        <p>Quisque et leo lacus. Proin dictum tincidunt odio sit amet lacinia. Vestibulum volutpat eget sapien id maximus. Etiam in maximus augue, at fringilla orci. Nam ornare aliquam varius.</p>
+        <p>Suspendisse non elementum nisl, et placerat velit. In ut enim malesuada, accumsan sem eu, sodales velit. Praesent ut ipsum nunc. Nulla facilisi. In a est magna. Ut hendrerit elementum elementum. Nam id mauris sed est hendrerit egestas ac non ligula.
+          Nam mollis cursus arcu ac dictum. Proin eget laoreet nibh.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="clinical-cases">
+    <div class="container gutter">
+      <h2>Phasellus risus nisl, dignissim ut venenatis et, convallis ut nibh. Nunc imperdiet
+            tempus risus nec aliquet. <span class="uppercase">Curabitur hendrerit diam nulla:</span></h2>
+
+      <div id="case-prev" class="left-arrow arrow-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+
+      <div class="cases-container">
+        <div class="common-case">
+          <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077560/company-site/medic-lab.png" alt="">
+          <div class="common-case-text">
+            <h4>Urgent Care</h4>
+            <p>Nunc egestas lorem purus, in efficitur ante pharetra at. Nunc commodo mauris eu dui vulputate volutpat.</p>
+            <ul>
+              <li>Donec hendrerit quis diam vel ultrices. </li>
+              <li>Proin sodales ipsum id ex convallis...</li>
             </ul>
+            <a href="#">Read more [..]</a>
+          </div>
         </div>
-        <div class="head">
-            <div class="name">Justin<span>Walker</span>
-            </div>
-            <div class="sub-name">dev/photo</div>
-            <div class="down"></div>
+        <div class="common-case">
+          <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077560/company-site/management-book.png" alt="">
+          <div class="common-case-text">
+            <h4>Chronic Condition <br> Management</h4>
+            <p>Aenean euismod lacus lorem, in pharetra quam ultrices id. Nam vel tempor justo, in sodales nibh.</p>
+            <ul>
+              <li>Sed interdum eros nec quam finibus </li>
+              <li>at congue turpis placerat... </li>
+            </ul>
+            <a href="#">Read more [..]</a>
+          </div>
         </div>
-        <div class="content-wrap">
-            <div class="sec intro">
-                <div class="text-contain">
-                    <div class="text">
-                        <h2>I Am A Boston-Based</h2>
-                        <h3>Photographer and Front-End Enthusiast</h3>
-                        <h5>Cat lover, pizza hound, horror fiend</h5>
-                        <h5 id="bot-h5"><span>And this is what i do</span></h5>
-                    </div>
-                    <div class="pg-btn begin">
-                        Begin
-                    </div>
-                </div>
-            </div>
+        <div class="common-case">
+          <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077561/company-site/team.png" alt="">
+          <div class="common-case-text">
+            <h4>Complex Case <br> Coordination</h4>
+            <p>Curabitur consequat eros turpis, a laoreet ipsum porta sit amet. Duis ultricies turpis quis orci dapibus, vitae vehicula libero venenatis.</p>
+            <ul>
+              <li>Nullam dignissim tortor id sapien... </li>
+            </ul>
+            <a href="#">Read more [..]</a>
+          </div>
         </div>
-        <div class="side sec-A">
-            <div class="desc">
-                <h1>Photography</h1>
-            </div>
-            <div class="sub-btn code-btn">
-            See Dev
-            </div>
+        <div class="common-case">
+          <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077560/company-site/home.png" alt="">
+          <div class="common-case-text">
+
+            <h4>Home Health Services</h4>
+            <p>Pellentesque lobortis neque at nunc semper egestas. Phasellus ex ipsum, aliquam ut ante id, tempus ornare ligula. Maecenas vitae dignissim purus.</p>
+            <ul>
+              <li>Integer non bibendum mi.</li>
+              <li>Integer pharetra dolor ut mauris...</li>
+            </ul>
+            <a href="#">Read more [..]</a>
+          </div>
         </div>
-        <div class="side sec-B">
-            <div class="desc">
-                <h1>Front-End</h1>
-            </div>
-            <div class="sub-btn back-btn">
-            Back
-            </div>
+      </div>
+
+      <div class="cases-container">
+        <div class="common-case">
+          <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509563378/company-site/post-discharge.jpg" alt="">
+          <div class="common-case-text">
+            <h4>Post discharge</h4>
+            <p>Donec dapibus convallis interdum. Aliquam porttitor sapien in metus ullamcorper sollicitudin. Suspendisse nisi lorem, varius elementum vulputate sit amet, rutrum dignissim neque.</p>
+            <ul>
+              <li>Ut sed mi et velit facilisis molestie. </li>
+            </ul>
+            <a href="#">Read more [..]</a>
+          </div>
         </div>
-<script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script >$(document).ready(function () {
-    $(".begin").on("click", function () {
-        $(".sec-A").addClass("showing");
-        $(".head").hide();
-    });
-    $(".down").on("click", function () {
-        $(".head").addClass("head-hide");
-    });
-    $(".home").on("click", function () {
-        $(".side").removeClass("showing");
-    });
-    $(".code-btn").on("click", function () {
-        $(".sec-B").addClass("showing");
-    });
-    $(".back-btn").on("click", function () {
-        $(".sec-B").removeClass("showing");
-    });
+        <div class="common-case">
+          <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509563379/company-site/pre-post-op.jpg" alt="">
+          <div class="common-case-text">
+            <h4>Pre and Post-op care</h4>
+            <p>Nullam tortor augue, maximus nec tincidunt placerat, tincidunt id nunc. Ut aliquet facilisis nisi, vel aliquam leo venenatis in.</p>
+            <ul>
+              <li>Nullam sit amet nisi neque. </li>
+              <li>Aliquam non nisl vel... </li>
+            </ul>
+            <a href="#">Read more [..]</a>
+          </div>
+        </div>
+        <div class="common-case">
+          <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509563381/company-site/behavioral-health.jpg" alt="">
+          <div class="common-case-text">
+            <h4>Behavioral Health</h4>
+            <p>Proin non sapien arcu. Cras auctor euismod eros, nec rutrum lorem suscipit in. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+            <ul>
+              <li>varius fringilla lorem at... </li>
+            </ul>
+            <a href="#">Read more [..]</a>
+          </div>
+        </div>
+        <div class="common-case">
+          <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509563375/company-site/health-other.jpg" alt="">
+          <div class="common-case-text">
+            <h4>Health Others</h4>
+            <p>Morbi libero lectus, sodales non auctor eget, scelerisque non neque. Aliquam scelerisque lacinia malesuada.</p>
+            <ul>
+              <li>Pellentesque sit amet ex nec felis posuere varius in vel turpis.</li>
+              <li>Maecenas purus tellus...</li>
+            </ul>
+            <a href="#">Read more [..]</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="case-next" class="right-arrow arrow-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+      <a href="#" class="see-more">See More >></a>
+
+  </section>
+  <section id="partners">
+    <div class="container gutter">
+      <h5>Partners</h5>
+
+      <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077559/company-site/company-logo3.png" alt="">
+      <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077560/company-site/company-logo2.png" alt="">
+      <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077559/company-site/company-logo.png" alt="">
+      <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077559/company-site/company-logo4.png" alt="">
+      <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077559/company-site/company-logo5.png" alt="">
+    </div>
+
+  </section>
+  <section id="testimonials">
+    <div class="container gutter">
+      <div id="prev-testimonials" class="left-arrow arrow-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+
+      <div class="testimonial-container">
+        <div class="testimonial testimonial-left">
+          <p>Integer pharetra dolor ut mauris consectetur, vel ultricies nunc pretium. Maecenas rhoncus nulla eget ligula venenatis viverra. Proin dapibus magna at dui rutrum mattis. Aenean viverra turpis vel dui fringilla efficitur. Suspendisse pharetra
+            at lacus in varius. Morbi elit lorem, condimentum ac purus id, tincidunt tristique mauris.</p>
+          <span class="testimonial-name uppercase">-Frank</span>
+        </div>
+
+        <div class="testimonial testimonial-mid">
+          <p>Aliquam fringilla, felis ac suscipit efficitur, quam neque euismod sem, vitae bibendum nibh leo vitae urna. Cras aliquet euismod mauris vitae iaculis. Sed semper, nulla eget ullamcorper rhoncus, orci tortor pellentesque nisi, non aliquam risus
+            ligula ut enim. Duis dapibus nec magna nec ultricies. Nulla eu hendrerit sem. </p>
+          <span class="testimonial-name uppercase">-Louise</span>
+        </div>
+
+        <div class="testimonial testimonial-right">
+          <p>Suspendisse at mauris quis urna suscipit malesuada nec et dolor. Quisque a scelerisque lorem. Ut quis lectus eget orci finibus interdum non at eros. In ut neque vel felis faucibus placerat. Phasellus blandit nisi a sapien euismod, eu volutpat
+            tellus iaculis. Nunc fringilla orci eu nulla pretium, vitae malesuada ante elementum.
+          </p>
+          <span class="testimonial-name uppercase">-Tina</span>
+        </div>
+      </div>
+
+      <div class="testimonial-container">
+        <div class="testimonial testimonial-left">
+          <p>Praesent odio ante, sagittis eu bibendum et, maximus sit amet felis. Curabitur eget arcu commodo, eleifend ante non, imperdiet nibh. Nullam elementum purus magna, vitae semper elit ullamcorper posuere. Proin mi leo, faucibus id augue in, mollis
+            euismod augue. </p>
+          <span class="testimonial-name uppercase">- Jill</span>
+        </div>
+
+        <div class="testimonial testimonial-mid">
+          <p>Suspendisse potenti. Curabitur blandit sem ex, non dapibus justo sodales ut. Donec efficitur eros ut commodo ultricies. Pellentesque at massa urna. Duis vitae posuere turpis. </p>
+          <span class="testimonial-name uppercase">- Jack</span>
+        </div>
+
+        <div class="testimonial testimonial-right">
+          <p>Cras volutpat mauris nibh, sit amet facilisis nibh laoreet sit amet. Phasellus sed n isl dui. Suspendisse gravida erat iaculis consectetur faucibus. Mauris aliquam massa ac est lobortis hendrerit. Praesent est velit, tristique vel volutpat id,
+            mattis lacinia risus.</p>
+          <span class="testimonial-name uppercase">- Abel</span>
+        </div>
+      </div>
+
+      <div id="next-testimonials" class="right-arrow arrow-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+
+      <div class="img-container">
+        <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077561/company-site/user.jpg" alt="" class="testimonial-img1">
+        <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077561/company-site/user2.jpg" alt="" class="testimonial-img2">
+        <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077561/company-site/user3.jpg" alt="" class="testimonial-img3">
+      </div>
+
+      <div class="img-container">
+        <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077561/company-site/user-icon.jpg" alt="" class="testimonial-img1">
+        <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077561/company-site/user4.jpg" alt="" class="testimonial-img2">
+        <img src="https://res.cloudinary.com/alxcrmr/image/upload/v1509077561/company-site/user5.jpg" alt="" class="testimonial-img3">
+      </div>
+      <a href="#" class="see-more">See More >></a>
+    </div>
+
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <nav id="footer-nav" class="footer-nav-gutter">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <br>
+      <span class="copyright">Copyright <a target="_blank" href="https://twitter.com/IAmAlexEJohnson">Alex Cramer</a> &copy; 2017</span>
+      <span class="attribution">Icons made by <a target="_blank" href="http://www.freepik.com" title="Freepik">Freepik</a> from <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="https://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></span>
+    </div>
+  </footer>
+</body>
+<script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js'></script>
+<script >/* ===== CASES ==== */
+var case_index = 1;
+
+showCases(case_index);
+
+function plusDivs(add) {
+  showCases(case_index += add);
+}
+
+function minusDivs(subtract) {
+  showCases(case_index -= subtract);
+}
+
+function showCases(n) {
+  var posts = document.getElementsByClassName("cases-container");
+  if (n > posts.length) {
+    case_index = 1;
+  }
+  if (n < 1) {
+    case_index = posts.length;
+  }
+
+  for (var i = 0; i < posts.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+    posts[i].style.display = "none";
+    posts[i].classList.remove("fade");
+  }window.CP.exitedLoop(0);
+  posts[case_index - 1].style.display = "block";
+  posts[case_index - 1].classList.add("fade");
+}
+
+document.getElementById("case-next").addEventListener("click", function () {
+  plusDivs(1);
+});
+
+document.getElementById("case-prev").addEventListener("click", function () {
+  minusDivs(1);
+});
+
+/* ===== TESTIMONIALS ==== */
+
+var testimonialIndex = 1;
+
+showTestimonials(testimonialIndex);
+
+function plusTestimonials(add) {
+  showTestimonials(testimonialIndex += add);
+}
+
+function minusTestimonials(subtract) {
+  showTestimonials(testimonialIndex -= subtract);
+}
+
+function showTestimonials(n) {
+  var posts = document.getElementsByClassName("testimonial-container");
+  var imgs = document.getElementsByClassName("img-container");
+  if (n > posts.length) {
+    testimonialIndex = 1;
+  }
+  if (n < 1) {
+    testimonialIndex = posts.length;
+  }
+
+  for (var i = 0; i < posts.length; i++) {if (window.CP.shouldStopExecution(1)) break;
+    posts[i].style.display = "none";
+    imgs[i].style.display = "none";
+  }window.CP.exitedLoop(1);
+  posts[testimonialIndex - 1].style.display = "block";
+  imgs[testimonialIndex - 1].style.display = "block";
+}
+
+document.
+getElementById("next-testimonials").
+addEventListener("click", function () {
+  plusTestimonials(1);
+});
+
+document.
+getElementById("prev-testimonials").
+addEventListener("click", function () {
+  minusTestimonials(1);
 });
 //# sourceURL=pen.js
 </script>
